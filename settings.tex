@@ -1,75 +1,38 @@
-\documentclass[a4paper,14pt]{extarticle}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Настройка параметров документа
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage[utf8]{inputenc}
-\usepackage[russian]{babel}
-\usepackage{graphicx}
-\usepackage[top=0.8in, bottom=0.8in, left=0.8in, right=0.8in]{geometry}
-\usepackage{pgfplots}
-\usepackage{amsmath}
-\usepackage{setspace}
-\usepackage{titlesec}
-\usepackage{float}
-\usepackage{chngcntr}
-\usepackage{pgfplots}
-\usepackage{amsfonts}
-\usepackage{pgfplotstable}
-\usepackage{multirow}
-\usepackage{karnaugh-map}
-\usepackage{tikz,xcolor}
-\usepackage{listings}
-\usepackage{indentfirst}
-\usepackage{hyperref}
+% Быть посвободнее при склеивании слов
+\sloppy
 
-\hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    filecolor=magenta,      
-    urlcolor=cyan,
+% Настройка листингов
+\renewcommand{\lstlistingname}{Листинг}
+\lstset{
+	frame=single, % adds a frame around the code
+	rulesepcolor=\color{gray},
+	rulecolor=\color{black},
+	breaklines=true,
+	xleftmargin=2em,
+	extendedchars={true},
+	inputencoding={utf8},
+	basicstyle={\ttfamily \scriptsize},
+	keywordstyle={\rmfamily \bfseries},
+	commentstyle={\rmfamily \itshape},
+	tabsize={2},
+	numbers={left},
+	frame={single},
+	showstringspaces={false},
 }
-
-\lstset{ %
-extendedchars=\true,
-keepspaces=true,
-%language=no, % choose the language of the code
-basicstyle=\footnotesize, % the size of the fonts that are used for the code
-numbers=left, % where to put the line-numbers
-numberstyle=\footnotesize, % the size of the fonts that are used for the line-numbers
-stepnumber=1, % the step between two line-numbers. If it is 1 each line will be numbered
-numbersep=10pt, % how far the line-numbers are from the code
-backgroundcolor=\color{white}, % choose the background color. You must add \usepackage{color}
-showspaces=false, % show spaces adding particular underscores
-showstringspaces=false, % underline spaces within strings
-showtabs=false, % show tabs within strings adding particular underscores
-frame=single, % adds a frame around the code
-tabsize=4, % sets default tabsize to 2 spaces
-captionpos=b, % sets the caption-position to bottom
-breaklines=true, % sets automatic line breaking
-breakatwhitespace=false, % sets if automatic breaks should only happen at whitespace
-escapeinside={\%*}{*)}, % if you want to add a comment within your code
-%postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\color{red}\hookrightarrow\space}}
+\lstdefinestyle{java}{
+	breaklines={true},
+	texcl=true,
+	language={Java},
 }
+\input{listings_cyr_hack}
 
-\titleformat{\section}[hang]
-  {\bfseries}
-  {}
-  {0em}
-  {\hspace{-0.4pt}\large \thesection\hspace{0.6em}}
-  
-  
-\titleformat{\subsection}[hang]
-  {\bfseries}
-  {}
-  {0em}
-  {\hspace{-0.4pt}\large \thesubsection\hspace{0.6em}}
+% Настройка стиля оглавления
+% \renewcommand{\tocchapterfont}{}
 
-%\linespread{1.3} % полуторный интервал
-%\renewcommand{\rmdefault}{ftm} % Times New Roman
-
-\newcommand{\nx}{\overline{x}}
-\newcommand{\p}{0.31}
-\newcommand{\scale}{1.4}
-
-\counterwithin{figure}{section}
-\counterwithin{equation}{section}
-\counterwithin{table}{section}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
